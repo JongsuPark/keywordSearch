@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  
+spring:
+  h2:    console:      enabled: true
+  datasource:    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 
+  jpa:
+    properties:      hibernate:
+        show_sql: true
+        format_sql: true
+    generate-ddl: true
+    hibernate:      ddl-auto: create-drop
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+      
+rest:
+  kakao:
+    url: https://dapi.kakao.com/v2/local/search/keyword.json
+    apiKey: KakaoAK 3e06d83f67971ad3001c9f0ae5149889
